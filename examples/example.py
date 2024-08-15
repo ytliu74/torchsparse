@@ -42,9 +42,9 @@ class RandomDataset:
 
 
 if __name__ == "__main__":
-    conv_config = F.get_default_conv_config()
+    conv_config = F.conv_config.get_default_conv_config()
     # conv_config.dataflow = F.Dataflow.GatherScatter
-    F.set_global_conv_config(conv_config)
+    F.conv_config.set_global_conv_config(conv_config)
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--device", type=str, default="cuda")
